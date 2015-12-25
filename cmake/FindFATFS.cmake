@@ -25,8 +25,6 @@ else()
         LIST(APPEND FATFS_DRIVER_SOURCES usbh_diskio.c)
     endif()
 endif()
-MESSAGE(STATUS "debug1 : " ${STORAGE_DRIVER})
-MESSAGE(STATUS "debug2 : " ${FATFS_DRIVER_SOURCES})
 
 SET(FATFS_OPTION_SOURCES syscall.c unicode.c)
 #if(CODE_PAGE EQUAL CP932)
@@ -95,8 +93,8 @@ FOREACH(SRC ${FATFS_OPTION_SOURCES})
     LIST(APPEND FATFS_SOURCES ${SRC_FILE})
 ENDFOREACH()
 
-message(STATUS "fatfs include " ${FATFS_INCLUDE_DIRS})
-message(STATUS "fatfs sources " ${FATFS_SOURCES})
+message(STATUS "fatfs include ${FATFS_INCLUDE_DIRS}")
+message(STATUS "fatfs sources ${FATFS_SOURCES}")
 
 INCLUDE(FindPackageHandleStandardArgs)
 
