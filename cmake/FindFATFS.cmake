@@ -93,8 +93,8 @@ FOREACH(SRC ${FATFS_OPTION_SOURCES})
     LIST(APPEND FATFS_SOURCES ${SRC_FILE})
 ENDFOREACH()
 
-message(STATUS "fatfs include ${FATFS_INCLUDE_DIRS}")
-message(STATUS "fatfs sources ${FATFS_SOURCES}")
+#message(STATUS "fatfs include ${FATFS_INCLUDE_DIRS}")
+#message(STATUS "fatfs sources ${FATFS_SOURCES}")
 
 INCLUDE(FindPackageHandleStandardArgs)
 
